@@ -80,7 +80,7 @@ const Dashboard = () => {
 
         setBrokerData(Object.values(brokerDataProcessed));
       } catch (err) {
-        toast.error(err.message);
+        //  toast.error(err.message);
       } finally {
         setLoading(false);
       }
