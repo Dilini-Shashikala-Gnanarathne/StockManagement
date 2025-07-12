@@ -80,6 +80,7 @@ const Dashboard = () => {
 
         setBrokerData(Object.values(brokerDataProcessed));
       } catch (err) {
+        toast.error(err.message);
       } finally {
         setLoading(false);
       }
@@ -149,11 +150,6 @@ const Dashboard = () => {
       setData(responseData.data);
       toast.success(responseData.message);
     } catch (err) {
-      console.log(5555);
-
-      setTimeout(() => {
-        toast.error(err.message);
-      }, 2000);
     } finally {
       setLoading(false);
     }
